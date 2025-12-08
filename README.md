@@ -1,3 +1,5 @@
+![Binary Trees Banner](./assets/binary_tree.png)
+
 # Binary Trees — Holberton School  
 ### Project README (Pair Programming)
 
