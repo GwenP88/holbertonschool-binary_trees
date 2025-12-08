@@ -25,7 +25,7 @@ At the end of this project, we were able to explain:
 ## Requirements  
 - Editors allowed: `vi`, `vim`, `emacs`  
 - Compilation (Holberton standard): gcc -Wall -Werror -Wextra -pedantic -std=gnu89
-- - Files must end with a newline  
+- Files must end with a newline  
 - **Betty style** required (checked with `betty-style.pl` and `betty-doc.pl`)  
 - No global variables  
 - Maximum **5 functions per file**  
