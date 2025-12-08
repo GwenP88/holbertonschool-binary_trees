@@ -9,9 +9,14 @@
 
 int binary_tree_is_root(const binary_tree_t *node)
 {
+	/* si le nœud n'existe pas, il ne peut pas être racine */
 	if (node == NULL)
 		return (0);
+
+	/* un nœud est racine s'il n'a pas de parent */	
 	if (node->parent == NULL)
 		return (1);
+	
+	/* sinon, ce n'est pas une racine */
 	return (0);
 }
