@@ -10,9 +10,14 @@
 
 void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int))
 {
+	/* si l'arbre est vide ou si la fonction est invalide, on ne fait rien */
 	if (tree == NULL || func == NULL)
 		return;
+
+	/* parcours récursif du sous-arbre gauche */
 	binary_tree_inorder(tree->left, func);
+	/* application de la fonction au nœud courant */
 	func(tree->n);
+	/* parcours récursif du sous-arbre droit */
 	binary_tree_inorder(tree->right, func);
 }
