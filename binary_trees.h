@@ -1,5 +1,9 @@
-#ifdef MAIN_H 
-#define MAIN_H
+#ifndef BINARY_TREE_H 
+#define BINARY_TREE_H
+#include <stdlib.h>
+#include <stdarg.h>
+#include <stdio.h>
+
 
 /**
  * struct binary_tree_s - Binary tree node
