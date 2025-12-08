@@ -53,88 +53,100 @@ typedef binary_tree_t heap_t;
 ```
 # Mandatory Tasks (0–18)
 
+# Mandatory Tasks (0–18)
+
 ## 0. New node  
 Create a standalone node with given parent.  
-**Objective:** memory allocation + initialization.  
+**Objective:** allocate and initialize a new binary tree node.  
 **Return:** new node or `NULL`.
 
 ## 1. Insert left  
 Insert node as left child.  
-**Objective:** replace existing left child if needed.  
+**Objective:** insert a node on the left and reattach the previous left child under it if needed.  
 **Return:** new node or `NULL`.
 
 ## 2. Insert right  
 Insert node as right child.  
-**Objective:** replace existing right child if needed.  
+**Objective:** insert a node on the right and reattach the previous right child under it if needed.  
 **Return:** new node or `NULL`.
 
 ## 3. Delete tree  
 Free the entire tree in post-order.  
-**Objective:** avoid memory leaks.  
+**Objective:** release all allocated nodes without memory leaks.  
 **Behavior:** do nothing if tree is `NULL`.
 
 ## 4. Is leaf  
 Check if a node has no children.  
+**Objective:** identify terminal nodes in the tree.  
 **Return:** `1` if leaf, else `0`.
 
 ## 5. Is root  
 Check if node has no parent.  
+**Objective:** detect whether a node is the root of the tree.  
 **Return:** `1` if root, else `0`.
 
 ## 6. Pre-order traversal  
 Visit nodes in **root → left → right**.  
-**Objective:** apply a callback function to each value.
+**Objective:** traverse the tree in pre-order and call a callback on each node value.  
 
 ## 7. In-order traversal  
 Visit nodes in **left → root → right**.  
-**Objective:** callback on each visited node.
+**Objective:** traverse the tree in in-order and call a callback on each node value.  
 
 ## 8. Post-order traversal  
 Visit nodes in **left → right → root**.  
-**Objective:** callback on each node.
+**Objective:** traverse the tree in post-order and call a callback on each node value.  
 
 ## 9. Height  
 Compute the height of the tree.  
+**Objective:** determine the longest path from root to a leaf (in edges).  
 **Return:** `0` for `NULL` tree.
 
 ## 10. Depth  
 Measure depth from a node to the root.  
+**Objective:** count how far a node is from the root (in edges).  
 **Return:** `0` for `NULL`.
 
 ## 11. Size  
 Count all nodes in the tree.  
+**Objective:** compute the total number of nodes in the structure.  
 **Return:** size or `0` for `NULL`.
 
 ## 12. Leaves  
 Count all leaf nodes.  
-**Objective:** ignore `NULL`.  
+**Objective:** compute how many terminal nodes the tree has.  
 **Return:** number of leaves.
 
 ## 13. Nodes  
 Count nodes with at least one child.  
-**Objective:** internal nodes only.  
+**Objective:** compute the number of internal (non-leaf) nodes.  
 **Return:** count.
 
 ## 14. Balance factor  
 Compute balance: **height(left) − height(right)**.  
+**Objective:** evaluate how balanced a binary tree is at the root.  
 **Return:** `0` if tree is `NULL`.
 
 ## 15. Is full  
 Check if every node has **0 or 2 children**.  
+**Objective:** verify that the tree respects the “full binary tree” property.  
 **Return:** `1` if full, else `0`.
 
 ## 16. Is perfect  
 Check if tree is full **and** all leaves are at the same level.  
+**Objective:** verify that the tree is both full and perfectly balanced in depth.  
 **Return:** `1` if perfect.
 
 ## 17. Sibling  
 Return a node’s sibling.  
-**Objective:** check parent and opposite child.  
+**Objective:** retrieve the other child of the same parent.  
 **Return:** sibling or `NULL`.
 
 ## 18. Uncle  
 Return a node’s uncle (parent’s sibling).  
+**Objective:** navigate up to the grandparent and return the parent’s sibling if it exists.  
 **Return:** uncle or `NULL`.
+
 
 ---
 
