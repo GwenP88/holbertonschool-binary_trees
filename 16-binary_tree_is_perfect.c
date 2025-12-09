@@ -1,37 +1,35 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "binary_trees.h"
-
+size_t binary_tree_height(const binary_tree_t *tree);
 /**
- * main - Entry point
+ *binary_tree_is_perfect - function that
+ *checks if a binary tree is perfect
+ *@tree: Tree
  *
- * Return: Always 0 (Success)
+ *Return: 0 if is tree not perfect and 1 if is perfect
  */
-int main(void)
+
+int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-    binary_tree_t *root;
-    int perfect;
+int height_right, height_left;
 
-    root = binary_tree_node(NULL, 98);
-    root->left = binary_tree_node(root, 12);
-    root->right = binary_tree_node(root, 402);
-    binary_tree_insert_right(root->left, 54);
-    binary_tree_insert_right(root, 128);
-    root->left->left = binary_tree_node(root->left, 10);
-    root->right->left = binary_tree_node(root->right, 10);
+if (tree == NULL)
+return (0);
 
-    binary_tree_print(root);
-    perfect = binary_tree_is_perfect(root);
-    printf("Perfect: %d\n\n", perfect);
+if (tree->left == NULL && tree->right == NULL)
+return (1);
 
-    root->right->right->left = binary_tree_node(root->right->right, 10);
-    binary_tree_print(root);
-    perfect = binary_tree_is_perfect(root);
-    printf("Perfect: %d\n\n", perfect);
+if (tree->left != NULL && tree->right == NULL)
+return (0);
 
-    root->right->right->right = binary_tree_node(root->right->right, 10);
-    binary_tree_print(root);
-    perfect = binary_tree_is_perfect(root);
-    printf("Perfect: %d\n", perfect);
-    return (0);
+if (tree->left == NULL && tree->right != NULL)
+return (0);
+
+height_left = binary_tree_height(tree->left);
+height_right = binary_tree_height(tree->right);
+
+if (height_left != height_right)
+return (0);
+
+return (binary_tree_is_perfect(tree->left) &&
+		binary_tree_is_perfect(tree->right));
 }
