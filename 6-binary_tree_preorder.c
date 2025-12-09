@@ -11,11 +11,14 @@
 
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 {
-if (tree == NULL || func == NULL)
-return;
+	/* si l'arbre est vide ou si la fonction est invalide, on ne fait rien */
+	if (tree == NULL || func == NULL)
+		return;
 
-func(tree->n);
-binary_tree_preorder(tree->left, func);
-binary_tree_preorder(tree->right, func);
-
+	/* applique la fonction au nœud courant */
+	func(tree->n);
+	/* parcourt récursivement le sous-arbre gauche */
+	binary_tree_preorder(tree->left, func);
+	/* parcourt récursivement le sous-arbre droit */
+	binary_tree_preorder(tree->right, func);
 }

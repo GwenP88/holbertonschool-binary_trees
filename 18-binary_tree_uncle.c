@@ -9,22 +9,34 @@
 
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
-binary_tree_t *p, *g;
+	/* pointeur vers le parent (p) et le grand-parent (g) */
+	binary_tree_t *p, *g;
 
-if (node == NULL)
-return (NULL);
-p = node->parent;
-if (p == NULL)
-return (NULL);
+	/* si le nœud est NULL, il n'a pas d'oncle */
+	if (node == NULL)
+		return (NULL);
 
-g = node->parent->parent;
-if (g == NULL)
-return (NULL);
+	/* récupération du parent du nœud */
+	p = node->parent;
 
-if (p == g->left)
-return (g->right);
+	/* si le parent n'existe pas, il n'y a pas d'oncle */
+	if (p == NULL)
+		return (NULL);
 
-else
-return (g->left);
+	/* récupération du grand-parent du nœud */
+	g = node->parent->parent;
 
+	/* si le grand-parent n'existe pas, il n'y a pas d'oncle */
+	if (g == NULL)
+		return (NULL);
+
+	/* si le parent est le fils gauche du grand-parent,
+	 * l'oncle est le fils droit
+	 */
+	if (p == g->left)
+		return (g->right);
+
+	/* sinon, le parent est le fils droit et l'oncle est le fils gauche */
+	else
+		return (g->left);
 }
