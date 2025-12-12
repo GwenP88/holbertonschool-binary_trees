@@ -3,11 +3,40 @@
 # Binary Trees — Holberton School  
 ### Project README (Pair Programming)
 
+## Authors
+
+This project was developed collaboratively using pair programming.
+
+- **GwenP88**  
+  GitHub: https://github.com/GwenP88
+
+- **Ali731-Amb**  
+  GitHub: https://github.com/Ali731-Amb
+
+
 ## Introduction  
 This repository contains our implementation of fundamental binary tree operations as part of the Holberton School Low-Level Programming curriculum. The work was completed **in a pair-programming setup**, following Holberton collaboration standards:  
 - **Task distribution:** one teammate handled **odd-numbered tasks**, the other handled **even-numbered tasks**.  
 - **Process:** continuous communication, synchronous code reviews, shared debugging sessions, validation of each function before moving forward, and strict enforcement of coding style.  
 - This project also served as practical training in team workflow, repository hygiene, and modular low-level design.
+
+---
+
+## Pair Programming Workflow
+
+This project was completed in a 2-student group using the following collaboration model:
+
+- Alternating task assignment (even vs odd tasks) while ensuring **joint architectural decisions**.  
+- Permanent communication on:
+  - Code logic  
+  - Big O complexity reasoning  
+  - Edge cases and input validation  
+  - Git commits, branches, and merges  
+- Live review of each function before pushing.  
+- Pair debugging sessions for segmentation faults, pointer issues, and list manipulation errors.  
+- Both students fully understand **all** parts of the code, regardless of who typed them.
+
+This mirrors real-world collaborative development: shared responsibility, consistent style, and synchronized progress.
 
 ---
 
@@ -51,8 +80,6 @@ typedef binary_tree_t avl_t;
 typedef binary_tree_t heap_t;
 
 ```
-# Mandatory Tasks (0–18)
-
 # Mandatory Tasks (0–18)
 
 ## 0. New node  
