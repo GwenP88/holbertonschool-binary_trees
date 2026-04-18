@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.jpeg" alt="holbertonschool-binary-trees Banner">
+</p>
+
 # binary_trees
 
 > Trees grow upward from a single root — and so does understanding, one node at a time.
