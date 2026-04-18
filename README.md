@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/banner.jpeg" alt="holbertonschool-binary-trees Banner">
+  <img src="./assets/banner.jpeg" alt="holbertonschool-binary-trees Banner" width="400">
 </p>
 
 # binary_trees
